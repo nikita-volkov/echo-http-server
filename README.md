@@ -1,0 +1,1 @@
+Server which simply responds with the same body and content type as in the request. Useful for testing whether gateway services modify the request content.

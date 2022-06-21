@@ -1,0 +1,67 @@
+cabal-version: 3.0
+
+name: identity-http-server
+version: 0.1
+
+common common-settings
+  default-extensions:
+    ApplicativeDo
+    Arrows
+    BangPatterns
+    BinaryLiterals
+    BlockArguments
+    ConstraintKinds
+    DataKinds
+    DefaultSignatures
+    DeriveDataTypeable
+    DeriveFoldable
+    DeriveFunctor
+    DeriveGeneric
+    DeriveTraversable
+    DerivingVia
+    DuplicateRecordFields
+    EmptyCase
+    EmptyDataDecls
+    FlexibleContexts
+    FlexibleInstances
+    FunctionalDependencies
+    GADTs
+    GeneralizedNewtypeDeriving
+    HexFloatLiterals
+    LambdaCase
+    LiberalTypeSynonyms
+    MultiParamTypeClasses
+    MultiWayIf
+    NoImplicitPrelude
+    NoMonomorphismRestriction
+    NumericUnderscores
+    OverloadedLabels
+    OverloadedStrings
+    PatternGuards
+    PatternSynonyms
+    ParallelListComp
+    QuasiQuotes
+    RankNTypes
+    RecordWildCards
+    ScopedTypeVariables
+    StandaloneDeriving
+    StrictData
+    TemplateHaskell
+    TupleSections
+    TypeApplications
+    TypeFamilies
+    TypeOperators
+    UndecidableInstances
+    ViewPatterns
+  default-language: Haskell2010
+  build-depends:
+    http-media >=0.8 && <0.9,
+    http-types >=0.12 && <0.13,
+    wai >=3.2 && <3.3,
+    warp >=3.3 && <3.4,
+    rerebase >=1.15.0.3 && <1.16,
+
+executable identity-http-server
+  import: common-settings
+  hs-source-dirs: server
+  main-is: Main.hs
