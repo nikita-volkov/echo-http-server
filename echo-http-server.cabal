@@ -1,6 +1,6 @@
 cabal-version: 3.0
 
-name: identity-http-server
+name: echo-http-server
 version: 0.1
 
 common common-settings
@@ -61,7 +61,7 @@ common common-settings
     warp >=3.3 && <3.4,
     rerebase >=1.15.0.3 && <1.16,
 
-executable identity-http-server
+executable echo-http-server
   import: common-settings
   hs-source-dirs: server
   main-is: Main.hs
